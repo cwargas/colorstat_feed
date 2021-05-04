@@ -21,7 +21,7 @@ def get_category(url):
         return 'politics'
     elif 'dailymail.co.uk' in url:
         return 'world'
-    elif 'phys.org' in url or 'nasa.gov' in url:
+    elif 'phys.org' in url or 'nasa.gov' in url or 'sciencedaily.com' in url:
         return 'space'
     elif 'cnet.com' in url or 'techradar.com' in url:
         return 'tech'
@@ -73,7 +73,7 @@ def fetch_feeds(feed_urls):
 if __name__ == '__main__':
     feed_urls = [
         # business
-        'https://www.cnbc.com/id/100003114/device/rss/rss.html',
+        'https://www.cnbc.com/id/10001147/device/rss/rss.html',
         'https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml',
         # politics
         'https://www.nationalreview.com/feed/',
@@ -90,8 +90,9 @@ if __name__ == '__main__':
         # science
         'https://www.newscientist.com/subject/technology/feed/',
         'https://www.livescience.com/feeds/all',
+        'https://www.sciencedaily.com/rss/top/science.xml'
         # general
-        'https://nypost.com/feed/',
+        'https://nypost.com/news/feed/',
         'https://reason.com/latest/feed/',
         'https://www.washingtontimes.com/rss/headlines/culture/entertainment/',
     ]

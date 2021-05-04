@@ -20,54 +20,68 @@ a.science {
     font-size: 12px;
     background-color: #FFEFE8;
     color: #F5803D;
+    text-decoration: none;
 }
 
 a.tech {
     font-size: 12px;
     background-color: #F0F0F0;
-    color: #696969
+    color: #696969;
+    text-decoration: none;
 }
 a.space {
     font-size: 12px;
     background-color: #E9F5F9;
-    color: #00A4FF
+    color: #00A4FF;
+    text-decoration: none;
 }
 a.politics {
     font-size: 12px;
     background-color: #F2F2FC;
-    color: #800080
+    color: #800080;
+    text-decoration: none;
 }
 a.business {
     font-size: 12px;
     background-color: #E8F7EB;
     color: #18BD53;
+    text-decoration: none;
 }
 
 a.world {
      font-size: 12px;
     background-color: #FFEFE8;
     color: #DC143C;
+    text-decoration: none;
 }
 
 
 a.international {
     font-size: 12px;
     background-color: #FFEFE8;
-    color: #DC143C
+    color: #DC143C;
+    text-decoration: none;
 }
 
 a.general {
     font-size: 12px;
-    background-color: #FFFFCC;
-    color: #ff7f50;
+    background-color: #FFEFE8;
+    color: #DC143C;
+    text-decoration: none;
 }
 
 div.article-pubdate {
-    font-size: 12px;
+    font-size: 11px;
+    color: #888888;
+    padding-bottom: 4px;
 }
 
 #headline a {
     font-size: 33px;
     background-color: yellow;
     text-decoration: none;
+}
+
+.article-content {
+    font-size: 15px;
 }

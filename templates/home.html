@@ -37,14 +37,14 @@
         <span class="article-content">{{article.title}}</span>
         <a class="{{article.category}}" href="{{article.link}}">{{article.link|domain}}</a>
         <div class="article-pubdate">{{article.published}}</div>
-        <br /> <br />
+         <!--<br />  -->
         {% endfor %}
         {% for page_num in articles.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=3) %}
             {% if page_num %}
                 {% if articles.page == page_num %}
-                    <a class="btn btn-info mb-4" , href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
+                    <a class="btn btn-primary mb-4" , href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
                 {% else %}
-                    <a class="btn btn-outline-info mb-4" , href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
+                    <a class="btn btn-outline-primary mb-4" , href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
                 {% endif %}
             {% else %}
                 <span class="">...</span>
