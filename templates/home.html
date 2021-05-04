@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css"/>
+{% endblock %}
+
+{% block body %}
+
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+                width="45%" height="45%" viewBox="0 0 648 115" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <g transform="matrix(4.15359,0,0,4.15359,-1923.31,-4060)"><text x="462.072px" y="1004.34px"
+                        style="font-family:'NHaasGroteskTXPro-75Bd', 'Neue Haas Grotesk Text Pro', sans-serif;font-weight:700;font-size:36.113px;">col</text><text
+                        x="514.725px" y="1004.34px"
+                        style="font-family:'NHaasGroteskTXPro-75Bd', 'Neue Haas Grotesk Text Pro', sans-serif;font-weight:700;font-size:36.113px;fill:#e83f8b;">o</text><text
+                        x="536.971px" y="1004.34px"
+                        style="font-family:'NHaasGroteskTXPro-75Bd', 'Neue Haas Grotesk Text Pro', sans-serif;font-weight:700;font-size:36.113px;">rs
+                        <tspan x="570.701px 585.11px 605.876px " y="1004.34px 1004.34px 1004.34px ">tat</tspan>
+                    </text></g>
+            </svg>
+        </a>
+    </header>
+
+    <!-- MAIN HEADLINE -->
+    <!-- <img src="https://example.com/image.jpg" alt="alt text"> -->
+<!--    <h1 id="headline" class="display-5 fw-bold text-black"><a href="https://example.com">Investors bet on a rebound</a></h1>-->
+<!--    <p>Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example-->
+<!--        featuring some basic HTML and helpful links. Download all our examples to get started.</p>-->
+    <br /><br />
+
+    {% for article in articles.items %}
+        <span class="article-content">{{article.title}}</span>
+        <a class="{{article.category}}" href="{{article.link}}">{{article.link|domain}}</a>
+        <div class="article-pubdate">{{article.published}}</div>
+        <br /> <br />
+        {% endfor %}
+        {% for page_num in articles.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=3) %}
+            {% if page_num %}
+                {% if articles.page == page_num %}
+                    <a class="btn btn-info mb-4" , href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
+                {% else %}
+                    <a class="btn btn-outline-info mb-4" , href="{{url_for('home', page=page_num)}}">{{page_num}}</a>
+                {% endif %}
+            {% else %}
+                <span class="">...</span>
+            {% endif %}
+    {% endfor %}
+
+    <hr class="col-3 col-md-2 mb-5">
+    <div class="row g-5">
+        <div class="col-md-6">
+            <h2>Support Colorstat</h2>
+            <p>Help keep this project up and running ad free. Your donation will go a long way in helping our team
+                maintain and develop this site</p>
+            <a href="/donate" class="btn btn-primary">
+                Donate
+            </a>
+        </div>
+
+        <div class="col-md-6">
+            <h2>About us</h2>
+            <p>Read about why we started the Colorstat project.</p>
+            <a href="/about" class="btn btn-primary">
+                About
+            </a>
+        </div>
+    </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2021 Colorstat</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Contact</a></li>
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="/about">About</a></li>
+        </ul>
+    </footer>
+</div>
+{% endblock %}

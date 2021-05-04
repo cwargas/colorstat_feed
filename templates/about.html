@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+
+<!-- Custom styles for this template -->
+<!-- <link href="starter-template.css" rel="stylesheet"> -->
+<link href="{{url_for('static', filename='starter-template.css')}}" rel="stylesheet" type="test/css">
+
+
+{% endblock %}
+
+{% block body %}
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg
+                width="45%" height="45%" viewBox="0 0 648 115" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <g transform="matrix(4.15359,0,0,4.15359,-1923.31,-4060)"><text x="462.072px" y="1004.34px"
+                        style="font-family:'NHaasGroteskTXPro-75Bd', 'Neue Haas Grotesk Text Pro', sans-serif;font-weight:700;font-size:36.113px;">col</text><text
+                        x="514.725px" y="1004.34px"
+                        style="font-family:'NHaasGroteskTXPro-75Bd', 'Neue Haas Grotesk Text Pro', sans-serif;font-weight:700;font-size:36.113px;fill:#e83f8b;">o</text><text
+                        x="536.971px" y="1004.34px"
+                        style="font-family:'NHaasGroteskTXPro-75Bd', 'Neue Haas Grotesk Text Pro', sans-serif;font-weight:700;font-size:36.113px;">rs
+                        <tspan x="570.701px 585.11px 605.876px " y="1004.34px 1004.34px 1004.34px ">tat</tspan>
+                    </text>
+                </g>
+            </svg>
+
+            <span class="fs-4"></span>
+        </a>
+    </header>
+
+    <h1 class="display-5 fw-bold text-black">A better way to track the news</h1>
+    <p class="fs-5 col-md-8">Colorstat delivers a superior way of keeping up with breaking news events. We link to many
+        of the major news outlets so you'll never miss an important story. Links are shown to encourage the reader to
+        visit the original source. A disturbing trend we see is news outlets bombarding readers with pop-up ads and
+        auto-play videos making for a terrifying user experience. Colorstat was created to have all breaking news
+        headlines at your fingertips. You decide what you want to read more of.</p>
+    <br>
+
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="row g-5">
+        <div class="col-md-6">
+            <h2>What our colors represent</h2>
+            <p>Each one of our colored links represent a news category that we track. Below are their corresponding
+                colors.</p>
+            <ul class="icon-list">
+                <li><code style="background-color:#E8F7EB; color:#18BD53;">Business</code></li>
+                <li><code style="background-color:#F2F2FC; color:#800080;">Politics</code></li>
+                <li><code style="background-color:#FFEFE8; color:#DC143C;">International</code></li>
+                <li><code style="background-color:#E9F5F9; color:#00A4FF;">Space</code></li>
+                <li><code style="background-color:#FCEEF4; color:#DB458E;">Entertainment</code></li>
+                <li><code style="background-color:#f0f0f0; color:#696969;">Tech</code></li>
+                <li><code style="background-color:#FFEFE8; color:#F5803D;">Science</code></li>
+                <li><code style="background-color:#FFFFCC; color:#ff7f50;">General news</code></li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h2>Ad free</h2>
+            <p>To continue running our site ad free, we welcome donations from our readers. Please visit our donate page
+                below.</p>
+            <a href="/donate" class="btn btn-primary">
+                Donate now
+            </a>
+        </div>
+    </div>
+
+    <footer class="pt-5 my-5 text-muted border-top">
+        Created by the Colorstat team &middot; &copy; 2021
+    </footer>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,73 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+h1 {
+    font-weight: 700;
+}
+
+a.science {
+    font-size: 12px;
+    background-color: #FFEFE8;
+    color: #F5803D;
+}
+
+a.tech {
+    font-size: 12px;
+    background-color: #F0F0F0;
+    color: #696969
+}
+a.space {
+    font-size: 12px;
+    background-color: #E9F5F9;
+    color: #00A4FF
+}
+a.politics {
+    font-size: 12px;
+    background-color: #F2F2FC;
+    color: #800080
+}
+a.business {
+    font-size: 12px;
+    background-color: #E8F7EB;
+    color: #18BD53;
+}
+
+a.world {
+     font-size: 12px;
+    background-color: #FFEFE8;
+    color: #DC143C;
+}
+
+
+a.international {
+    font-size: 12px;
+    background-color: #FFEFE8;
+    color: #DC143C
+}
+
+a.general {
+    font-size: 12px;
+    background-color: #FFFFCC;
+    color: #ff7f50;
+}
+
+div.article-pubdate {
+    font-size: 12px;
+}
+
+#headline a {
+    font-size: 33px;
+    background-color: yellow;
+    text-decoration: none;
+}
