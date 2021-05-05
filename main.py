@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 view_counter = ViewCounter(app, db)
-domain = 'colorstat.com'
+domain = 'localhost'
 
 
 class Article(db.Model):
@@ -31,10 +31,13 @@ class Article(db.Model):
 def get_domain(link):
     return urlparse(link).netloc.replace('www.', '')
 
+def format_time(t):
+    #return datetime.datetime.strftime(t, '%m-%d-%Y %I:%M %p')
+    return datetime.datetime.strftime(t, '%m-%d-%Y')
 
 app.jinja_env.filters['domain'] = get_domain
 app.jinja_env.globals['now'] = datetime.datetime.utcnow
-
+app.jinja_env.filters['format_time'] = format_time
 
 """create the DB. done only once
 from main import db
@@ -93,5 +96,12 @@ def sitemap():
     return respose
 
 
+import downloader
+import threading
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    # start downloader in a separate thread
+    thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
+    thread.start()
+    # disable reloader so it doesn't run downloader twice
+    app.run(debug=True, use_reloader=False)
