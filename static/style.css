@@ -12,9 +12,7 @@
     }
 }
 
-h1 {
-    font-weight: 700;
-}
+
 
 a.science {
     font-size: 12px;
@@ -76,10 +74,15 @@ div.article-pubdate {
     padding-bottom: 4px;
 }
 
+ h1 {
+    font-weight: 700;
+    color: #000000;
+}
+
 #headline a {
     font-size: 33px;
-    background-color: yellow;
     text-decoration: none;
+    color: #000000;
 }
 
 .article-content {
