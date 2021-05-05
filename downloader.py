@@ -16,11 +16,11 @@ def get_category(url):
     Returns:
         [str]: Category name
     """
-    if 'cnbc.com' in url or 'a.dj.com' in url:
+    if 'cnbc.com' in url or 'a.dj.com' in url or 'wsj.com' in url:
         return 'business'
-    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url:
+    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url:
         return 'politics'
-    elif 'dailymail.co.uk' in url:
+    elif 'dailymail.co.uk' in url or 'nypost.com' in url:
         return 'world'
     elif 'phys.org' in url or 'nasa.gov' in url:
         return 'space'
@@ -28,8 +28,12 @@ def get_category(url):
         return 'tech'
     elif 'newscientist.com' in url or 'livescience.com' in url:
         return 'science'
-    elif 'nypost.com' in url or 'reason.com' in url or 'washingtontimes.com' in url:
+    elif 'reason.com' in url or 'washingtontimes.com' in url:
         return 'general'
+    elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
+        return 'defense'
+    elif 'pagesix.com' in url or 'etonline.com' in url:
+        return 'entertainment'
     else:
         return '<unknown>'
 
@@ -89,25 +93,35 @@ def start_fetching(delay=15):
 
 feed_urls = [
     # business
-    'https://www.cnbc.com/id/100003114/device/rss/rss.html',
+    'https://www.cnbc.com/id/10001147/device/rss/rss.html',
     'https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml',
+    'https://feeds.a.dj.com/rss/RSSOpinion.xml',
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
     'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
+    'https://www.theepochtimes.com/c-us-features/feed',
     # world
     'https://www.dailymail.co.uk/news/worldnews/index.rss',
     # space
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
+    'https://rss.nytimes.com/services/xml/rss/nyt/Space.xml',
     # tech
     'https://www.cnet.com/rss/news/',
     'https://www.techradar.com/rss/news/world-of-tech',
     # science
     'https://www.newscientist.com/subject/technology/feed/',
     'https://www.livescience.com/feeds/all',
+    'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml',
     # general
-    'https://nypost.com/feed/',
+    'https://nypost.com/news/feed/',
     'https://reason.com/latest/feed/',
     'https://www.washingtontimes.com/rss/headlines/culture/entertainment/',
+    # defense
+    'https://rss.politico.com/defense.xml',
+    'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=1&Site=945',
+    'https://www.military.com/rss-feeds/content?keyword=headlines&channel=news&type=news',
+    # entertainment
+    'https://www.etonline.com/news/rss',
 ]
