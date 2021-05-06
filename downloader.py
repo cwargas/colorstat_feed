@@ -4,7 +4,7 @@ import time
 import feedparser
 from dateutil import parser
 
-from main import Article, db
+from app import Article, db
 
 
 def get_category(url):
