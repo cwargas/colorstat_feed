@@ -99,9 +99,17 @@ def sitemap():
 import downloader
 import threading
 
+# if __name__ == '__main__':
+#     # start downloader in a separate thread
+#     thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
+#     thread.start()
+#     # disable reloader so it doesn't run downloader twice
+#     app.run(debug=True, use_reloader=False)
+
+
+# start downloader in a separate thread
+thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
+thread.start()
 if __name__ == '__main__':
-    # start downloader in a separate thread
-    thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
-    thread.start()
-    # disable reloader so it doesn't run downloader twice
-    app.run(debug=True, use_reloader=False)
+# disable reloader so it doesn't run downloader twice
+app.run(debug=True, use_reloader=False)
