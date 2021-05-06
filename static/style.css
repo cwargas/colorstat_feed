@@ -112,6 +112,16 @@ a.entertainment {
     border-radius: 4px;
 }
 
+a.nypost {
+     font-size: 12px;
+    background-color: #eef7fd;
+    color: #217AB7;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 3px;
+    border-radius: 4px;
+}
+
 div.article-pubdate {
     font-size: 11px;
     color: #888888;

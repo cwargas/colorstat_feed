@@ -32,8 +32,10 @@ def get_category(url):
         return 'general'
     elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
         return 'defense'
-    elif 'pagesix.com' in url or 'etonline.com' in url:
+    elif 'etonline.com' in url:
         return 'entertainment'
+    elif 'nypost.com' in url:
+        return 'nypost'
     else:
         return '<unknown>'
 
