@@ -112,4 +112,4 @@ thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
 thread.start()
 if __name__ == '__main__':
 # disable reloader so it doesn't run downloader twice
-app.run(debug=True, use_reloader=False)
+    app.run(debug=True, use_reloader=False)
