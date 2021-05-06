@@ -3,3 +3,4 @@ flask-sqlalchemy
 flask-view-counter
 feedparser
 python-dateutil
+gunicorn
