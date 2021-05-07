@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 view_counter = ViewCounter(app, db)
-domain = 'colorstat.com'
+domain = 'megafeed.co'
 
 
 class Article(db.Model):
@@ -99,6 +99,7 @@ def sitemap():
 import downloader
 import threading
 
+# Use below if running on localhost
 # if __name__ == '__main__':
 #     # start downloader in a separate thread
 #     thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
@@ -107,8 +108,9 @@ import threading
 #     app.run(debug=True, use_reloader=False)
 
 
+# Use below code when hosted online
 # start downloader in a separate thread
-thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
+thread = threading.Thread(target=downloader.start_fetching, args=(20, ))
 thread.start()
 if __name__ == '__main__':
 # disable reloader so it doesn't run downloader twice
