@@ -16,15 +16,15 @@ def get_category(url):
     Returns:
         [str]: Category name
     """
-    if 'cnbc.com' in url or 'a.dj.com' in url or 'wsj.com' in url:
+    if 'cnbc.com' in url or 'a.dj.com' in url or 'wsj.com' in url or 'economist.com' in url:
         return 'business'
     elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url:
         return 'politics'
     elif 'dailymail.co.uk' in url or 'nypost.com' in url:
         return 'world'
-    elif 'phys.org' in url or 'nasa.gov' in url:
+    elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url:
         return 'space'
-    elif 'cnet.com' in url or 'techradar.com' in url:
+    elif 'cnet.com' in url or 'techradar.com' in url or 'hnrss.org' in url:
         return 'tech'
     elif 'newscientist.com' in url or 'livescience.com' in url:
         return 'science'
@@ -32,8 +32,6 @@ def get_category(url):
         return 'general'
     elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
         return 'defense'
-    elif 'etonline.com' in url:
-        return 'entertainment'
     elif 'nypost.com' in url:
         return 'nypost'
     else:
@@ -98,6 +96,7 @@ feed_urls = [
     'https://www.cnbc.com/id/10001147/device/rss/rss.html',
     'https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml',
     'https://feeds.a.dj.com/rss/RSSOpinion.xml',
+    'https://www.economist.com/united-states/rss.xml'
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
@@ -109,9 +108,11 @@ feed_urls = [
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
     'https://rss.nytimes.com/services/xml/rss/nyt/Space.xml',
+    'https://spacenews.com/feed/'
     # tech
     'https://www.cnet.com/rss/news/',
     'https://www.techradar.com/rss/news/world-of-tech',
+    'https://hnrss.org/newest?points=100'
     # science
     'https://www.newscientist.com/subject/technology/feed/',
     'https://www.livescience.com/feeds/all',
@@ -124,6 +125,4 @@ feed_urls = [
     'https://rss.politico.com/defense.xml',
     'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=1&Site=945',
     'https://www.military.com/rss-feeds/content?keyword=headlines&channel=news&type=news',
-    # entertainment
-    'https://www.etonline.com/news/rss',
 ]
