@@ -58,7 +58,7 @@ def home():
     page = request.args.get('page', 1, type=int)
     articles = Article.query.order_by(
         Article.published.desc()).paginate(page=page, per_page=50)
-    return render_template('home.html', title='Colorstat', articles=articles)
+    return render_template('home.html', title='Megafeed', articles=articles)
 
 
 @app.route('/about', methods=['GET'])
