@@ -18,11 +18,11 @@ def get_category(url):
     """
     if 'cnbc.com' in url or 'a.dj.com' in url or 'wsj.com' in url or 'economist.com' in url:
         return 'business'
-    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url:
+    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
-    elif 'dailymail.co.uk' in url or 'theguardian.com' in url:
+    elif 'dailymail.co.uk' in url:
         return 'world'
-    elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url:
+    elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url or 'space.com' in url or 'universetoday.com' in url or 'spaceflightnow.com' in url or 'theguardian.com' in url:
         return 'space'
     elif 'cnet.com' in url or 'techradar.com' in url or 'hnrss.org' in url or 'techrepublic.com' in url:
         return 'tech'
@@ -102,14 +102,19 @@ feed_urls = [
     'https://www.newsmax.com/rss/Politics/1/',
     'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
     'https://www.theepochtimes.com/c-us-features/feed',
+    'https://www.powerlineblog.com/index.xml',
+    'https://www.theamericanconservative.com/web-categories/politics/feed/',
     # world
     'https://www.dailymail.co.uk/news/worldnews/index.rss',
-    'https://www.theguardian.com/world/rss',
     # space
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
     'https://rss.nytimes.com/services/xml/rss/nyt/Space.xml',
     'https://spacenews.com/feed/',
+    'https://www.space.com/feeds/all',
+    'https://www.universetoday.com/feed/',
+    'https://spaceflightnow.com/feed/',
+    'https://www.theguardian.com/science/space/rss',
     # tech
     'https://www.cnet.com/rss/news/',
     'https://www.techradar.com/rss/news/world-of-tech',
