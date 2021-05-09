@@ -113,7 +113,6 @@ feed_urls = [
     'https://www.cnet.com/rss/news/',
     'https://www.techradar.com/rss/news/world-of-tech',
     'https://hnrss.org/best',
-    'https://hnrss.org/newest?points=100',
     'https://www.techrepublic.com/rssfeeds/articles/',
     # science
     'https://www.newscientist.com/subject/technology/feed/',
