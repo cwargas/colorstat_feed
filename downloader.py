@@ -20,7 +20,7 @@ def get_category(url):
         return 'business'
     elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url:
         return 'politics'
-    elif 'dailymail.co.uk' in url or 'nypost.com' in url:
+    elif 'dailymail.co.uk' in url or 'theguardian.com' in url:
         return 'world'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url:
         return 'space'
@@ -104,6 +104,7 @@ feed_urls = [
     'https://www.theepochtimes.com/c-us-features/feed',
     # world
     'https://www.dailymail.co.uk/news/worldnews/index.rss',
+    'https://www.theguardian.com/world/rss',
     # space
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
