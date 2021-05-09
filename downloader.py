@@ -24,11 +24,11 @@ def get_category(url):
         return 'world'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url:
         return 'space'
-    elif 'cnet.com' in url or 'techradar.com' in url or 'hnrss.org' in url:
+    elif 'cnet.com' in url or 'techradar.com' in url or 'hnrss.org' in url or 'techrepublic.com' in url:
         return 'tech'
-    elif 'newscientist.com' in url or 'livescience.com' in url:
+    elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
-    elif 'reason.com' in url or 'washingtontimes.com' in url:
+    elif 'reason.com' in url or 'washingtontimes.com' in url or 'lifehacker.com' in url:
         return 'general'
     elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
         return 'defense'
@@ -96,7 +96,7 @@ feed_urls = [
     'https://www.cnbc.com/id/10001147/device/rss/rss.html',
     'https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml',
     'https://feeds.a.dj.com/rss/RSSOpinion.xml',
-    'https://www.economist.com/united-states/rss.xml'
+    'https://www.economist.com/united-states/rss.xml',
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
@@ -108,19 +108,23 @@ feed_urls = [
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
     'https://rss.nytimes.com/services/xml/rss/nyt/Space.xml',
-    'https://spacenews.com/feed/'
+    'https://spacenews.com/feed/',
     # tech
     'https://www.cnet.com/rss/news/',
     'https://www.techradar.com/rss/news/world-of-tech',
-    'https://hnrss.org/newest?points=100'
+    'https://hnrss.org/best',
+    'https://hnrss.org/newest?points=100',
+    'https://www.techrepublic.com/rssfeeds/articles/',
     # science
     'https://www.newscientist.com/subject/technology/feed/',
     'https://www.livescience.com/feeds/all',
     'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml',
+    'https://www.sciencemag.org/rss/news_current.xml',
     # general
-    'https://nypost.com/news/feed/',
+    'https://nypost.com/opinion/feed/',
     'https://reason.com/latest/feed/',
     'https://www.washingtontimes.com/rss/headlines/culture/entertainment/',
+    'https://lifehacker.com/rss',
     # defense
     'https://rss.politico.com/defense.xml',
     'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=1&Site=945',
