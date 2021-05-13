@@ -24,7 +24,7 @@ def get_category(url):
         return 'world'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url or 'space.com' in url or 'universetoday.com' in url or 'spaceflightnow.com' in url or 'theguardian.com' in url:
         return 'space'
-    elif 'cnet.com' in url or 'techradar.com' in url or 'hnrss.org' in url or 'techrepublic.com' in url:
+    elif 'cnet.com' in url or 'techradar.com' in url or 'techrepublic.com' in url:
         return 'tech'
     elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
@@ -118,7 +118,6 @@ feed_urls = [
     # tech
     'https://www.cnet.com/rss/news/',
     'https://www.techradar.com/rss/news/world-of-tech',
-    'https://hnrss.org/best',
     'https://www.techrepublic.com/rssfeeds/articles/',
     # science
     'https://www.newscientist.com/subject/technology/feed/',
