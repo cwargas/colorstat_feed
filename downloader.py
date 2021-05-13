@@ -16,7 +16,7 @@ def get_category(url):
     Returns:
         [str]: Category name
     """
-    if 'cnbc.com' in url or 'a.dj.com' in url or 'wsj.com' in url or 'economist.com' in url:
+    if 'cnbc.com' in url or 'a.dj.com' in url or 'wsj.com' in url:
         return 'business'
     elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
@@ -96,7 +96,6 @@ feed_urls = [
     'https://www.cnbc.com/id/10001147/device/rss/rss.html',
     'https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml',
     'https://feeds.a.dj.com/rss/RSSOpinion.xml',
-    'https://www.economist.com/united-states/rss.xml',
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
