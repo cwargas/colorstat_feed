@@ -2,7 +2,6 @@ import datetime
 import time
 
 import feedparser
-from dateutil import parser
 
 from app import Article, db
 
@@ -16,7 +15,7 @@ def get_category(url):
     Returns:
         [str]: Category name
     """
-    if 'cnbc.com' in url or 'a.dj.com' in url or 'wsj.com' in url:
+    if 'cnbc.com' in url or 'a.dj.com' in url:
         return 'business'
     elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
@@ -45,9 +44,21 @@ def fetch_feeds(feed_urls):
         feed_urls ([list]): List of feed URLs
     """
     items = []
-    for feed_url in feed_urls:
-        # print(feed_url)
-        feed = feedparser.parse(feed_url)
+    for i, feed_url in enumerate(feed_urls):
+        print(f'{i+1}/{len(feed_urls)}: {feed_url}')
+        success = False
+        for _ in range(5):
+            try:
+                feed = feedparser.parse(feed_url)
+            except Exception as e:
+                print(e)
+                time.sleep(1)
+            else:
+                success = True
+                break
+        if not success:
+            continue
+
         for entry in feed.entries:
             item = {
                 'title': entry.title,
@@ -58,10 +69,7 @@ def fetch_feeds(feed_urls):
             }
             if item not in items:
                 items.append(item)
-    # import json
-    # with open('db.json', 'w') as f:
-    #     json.dump(items, f, indent=2)
-    # return
+
     print('Inserting into DB...')
     articles = []
     links = set(result[0] for result in db.session.query(Article.link).all())

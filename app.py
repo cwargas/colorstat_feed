@@ -27,6 +27,38 @@ class Article(db.Model):
         return '<Title {}, Published {}, Link {}, Category {}>'.format(
             self.title, self.published, self.link, self.category)
 
+class View(db.Model):
+    __tablename__ = 'vc_requests'
+    id = db.Column(db.Integer, primary_key=True)
+    year = db.Column(db.Integer, nullable=False)
+    month = db.Column(db.Integer, nullable=False)
+    day = db.Column(db.Integer, nullable=False)
+    hour = db.Column(db.Integer, nullable=False)
+    minute = db.Column(db.Integer, nullable=False)
+    ip = db.Column(db.String, nullable=False)
+    user_agent = db.Column(db.String, nullable=False)
+    path = db.Column(db.String, nullable=False)
+    status = db.Column(db.Integer, nullable=False)
+    args = db.Column(db.String, nullable=True)
+
+    def __repr__(self):
+        return '<{}, {}-{}-{} {}:{}>'.format(self.ip, self.year, self.month, self.day,
+        self.hour, self.minute)
+
+def get_views():
+    past_week = {}
+    for days in range(7, -1, -1):
+        date = (datetime.datetime.now() - datetime.timedelta(days=days)).date()
+        past_week[date] = 0
+
+    views = View.query.all()
+    for view in views:
+        date = datetime.date(year=view.year, month=view.month, day=view.day)
+        if date not in past_week.keys():
+            continue
+        past_week[date] += 1
+
+    return ' '.join([f'{date.isoformat()}: {count}' for date, count in past_week.items()])
 
 def get_domain(link):
     return urlparse(link).netloc.replace('www.', '')
@@ -58,7 +90,7 @@ def home():
     page = request.args.get('page', 1, type=int)
     articles = Article.query.order_by(
         Article.published.desc()).paginate(page=page, per_page=50)
-    return render_template('home.html', title='Megafeed', articles=articles)
+    return render_template('home.html', title='Megafeed', articles=articles, views=get_views())
 
 
 @app.route('/about', methods=['GET'])
@@ -99,19 +131,18 @@ def sitemap():
 import downloader
 import threading
 
-# Use below if running on localhost
-# if __name__ == '__main__':
-#     # start downloader in a separate thread
-#     thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
-#     thread.start()
-#     # disable reloader so it doesn't run downloader twice
-#     app.run(debug=True, use_reloader=False)
-
-
-# Use below code when hosted online
-# start downloader in a separate thread
-thread = threading.Thread(target=downloader.start_fetching, args=(20, ))
-thread.start()
-if __name__ == '__main__':
-# disable reloader so it doesn't run downloader twice
-    app.run(debug=True, use_reloader=False)
+LOCAL = False
+if LOCAL: # Use below if running on localhost
+    if __name__ == '__main__':
+        # start downloader in a separate thread
+        thread = threading.Thread(target=downloader.start_fetching, args=(10, ))
+        thread.start()
+        # disable reloader so it doesn't run downloader twice
+        app.run(debug=True, use_reloader=False)
+else: # Use below code when hosted online
+    # start downloader in a separate thread
+    thread = threading.Thread(target=downloader.start_fetching, args=(20, ))
+    thread.start()
+    if __name__ == '__main__':
+    # disable reloader so it doesn't run downloader twice
+        app.run(debug=True, use_reloader=False)
