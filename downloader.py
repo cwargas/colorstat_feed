@@ -15,7 +15,7 @@ def get_category(url):
     Returns:
         [str]: Category name
     """
-    if 'cnbc.com' in url:
+    if 'nypost.com' in url:
         return 'business'
     elif 'nationalreview.com' in url or 'newsmax.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
@@ -23,7 +23,7 @@ def get_category(url):
         return 'space'
     elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
-    elif 'reason.com' in url or 'nypost.com' in url:
+    elif 'reason.com' in url:
         return 'general'
     elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
         return 'defense'
@@ -95,7 +95,7 @@ def start_fetching(delay=15):
 
 feed_urls = [
     # business
-    'https://www.cnbc.com/id/10001147/device/rss/rss.html',
+     'https://nypost.com/opinion/feed/',
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
@@ -117,7 +117,6 @@ feed_urls = [
     'https://www.livescience.com/feeds/all',
     'https://www.sciencemag.org/rss/news_current.xml',
     # general
-    'https://nypost.com/opinion/feed/',
     'https://reason.com/latest/feed/',
     # defense
     'https://rss.politico.com/defense.xml',
