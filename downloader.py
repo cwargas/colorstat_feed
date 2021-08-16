@@ -19,12 +19,8 @@ def get_category(url):
         return 'business'
     elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
-    elif 'dailymail.co.uk' in url:
-        return 'world'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url or 'space.com' in url or 'universetoday.com' in url:
         return 'space'
-    elif 'cnet.com' in url or 'techradar.com' in url or 'techrepublic.com' in url:
-        return 'tech'
     elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
     elif 'reason.com' in url:
@@ -110,7 +106,7 @@ feed_urls = [
     'https://www.powerlineblog.com/index.xml',
     'https://www.theamericanconservative.com/web-categories/politics/feed/',
     # world
-    'https://www.dailymail.co.uk/news/worldnews/index.rss',
+  
     # space
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
@@ -119,9 +115,7 @@ feed_urls = [
     'https://www.space.com/feeds/all',
     'https://www.universetoday.com/feed/',
     # tech
-    'https://www.cnet.com/rss/news/',
-    'https://www.techradar.com/rss/news/world-of-tech',
-    'https://www.techrepublic.com/rssfeeds/articles/',
+   
     # science
     'https://www.newscientist.com/subject/technology/feed/',
     'https://www.livescience.com/feeds/all',
