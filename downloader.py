@@ -17,18 +17,16 @@ def get_category(url):
     """
     if 'cnbc.com' in url:
         return 'business'
-    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'nytimes.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
+    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url or 'space.com' in url or 'universetoday.com' in url:
         return 'space'
     elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
-    elif 'reason.com' in url:
+    elif 'reason.com' in url or 'nypost.com' in url:
         return 'general'
     elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
         return 'defense'
-    elif 'nypost.com' in url:
-        return 'nypost'
     else:
         return '<unknown>'
 
@@ -101,7 +99,6 @@ feed_urls = [
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
-    'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml',
     'https://www.theepochtimes.com/c-us-features/feed',
     'https://www.powerlineblog.com/index.xml',
     'https://www.theamericanconservative.com/web-categories/politics/feed/',
@@ -110,7 +107,6 @@ feed_urls = [
     # space
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
-    'https://rss.nytimes.com/services/xml/rss/nyt/Space.xml',
     'https://spacenews.com/feed/',
     'https://www.space.com/feeds/all',
     'https://www.universetoday.com/feed/',
@@ -119,7 +115,6 @@ feed_urls = [
     # science
     'https://www.newscientist.com/subject/technology/feed/',
     'https://www.livescience.com/feeds/all',
-    'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml',
     'https://www.sciencemag.org/rss/news_current.xml',
     # general
     'https://nypost.com/opinion/feed/',
