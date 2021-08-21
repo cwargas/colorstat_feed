@@ -17,7 +17,7 @@ def get_category(url):
     """
     if 'nypost.com' in url:
         return 'business'
-    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'theepochtimes.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
+    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url or 'space.com' in url or 'universetoday.com' in url:
         return 'space'
@@ -99,7 +99,6 @@ feed_urls = [
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
-    'https://www.theepochtimes.com/c-us-features/feed',
     'https://www.powerlineblog.com/index.xml',
     'https://www.theamericanconservative.com/web-categories/politics/feed/',
     # world
