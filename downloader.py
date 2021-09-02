@@ -103,7 +103,7 @@ feed_urls = [
     'https://www.theamericanconservative.com/web-categories/politics/feed/',
     # world
   
-    # space
+    # space articles
     'https://phys.org/rss-feed/breaking/space-news/',
     'https://www.nasa.gov/rss/dyn/breaking_news.rss',
     'https://spacenews.com/feed/',
