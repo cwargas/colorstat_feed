@@ -23,7 +23,7 @@ def get_category(url):
         return 'space'
     elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
-    elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
+    elif 'defense.gov' in url or 'military.com' in url:
         return 'defense'
     else:
         return '<unknown>'
@@ -114,7 +114,6 @@ feed_urls = [
     'https://www.sciencemag.org/rss/news_current.xml',
 
     # defense
-    'https://rss.politico.com/defense.xml',
     'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=1&Site=945',
     'https://www.military.com/rss-feeds/content?keyword=headlines&channel=news&type=news',
 ]
