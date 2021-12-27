@@ -114,5 +114,5 @@ feed_urls = [
     'https://www.sciencemag.org/rss/news_current.xml',
 
     # defense
-    'https://www.military.com/rss-feeds/content?keyword=headlines&channel=news&type=news',
+
 ]
