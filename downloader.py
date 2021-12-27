@@ -15,7 +15,7 @@ def get_category(url):
     Returns:
         [str]: Category name
     """
-    if 'nypost.com' in url or 'investing.com' in url or 'deadline.com' in url:
+    if 'nypost.com' in url or 'investing.com' in url:
         return 'business'
     elif 'nationalreview.com' in url or 'newsmax.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
@@ -100,7 +100,7 @@ feed_urls = [
     'https://www.newsmax.com/rss/Politics/1/',
     'https://www.theamericanconservative.com/web-categories/politics/feed/',
     # entertainment
-    'https://deadline.com/feed/',
+
   
     # space articles
     'https://phys.org/rss-feed/breaking/space-news/',
