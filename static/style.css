@@ -180,5 +180,11 @@ a.main-feed:visited {
 .footer  {
     text-decoration: none !important;
     color: #0095FF;
+    font-size: 13px;
 
 }
+
+.mb-1 {
+    font-size: 13px;
+}
+
