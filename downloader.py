@@ -93,7 +93,7 @@ def start_fetching(delay=15):
 
 feed_urls = [
     # business
-     'https://nypost.com/opinion/feed/',
+    'https://nypost.com/opinion/feed/',
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
@@ -114,6 +114,6 @@ feed_urls = [
     'https://www.sciencemag.org/rss/news_current.xml',
 
     # defense
-    'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=1&Site=945',
+    'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?ContentType=800&Site=945&max=10',
     'https://www.military.com/rss-feeds/content?keyword=headlines&channel=news&type=news',
 ]
