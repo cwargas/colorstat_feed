@@ -131,10 +131,23 @@ div.article-pubdate {
  h1 {
     font-weight: 700;
     color: #000000;
+
+}
+
+@media only screen and (min-width: 850px) {
+  h1 {
+    line-height: .7 !important
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  h1 {
+    line-height: .9 !important
+  }
 }
 
 #headline a {
-    font-size: 33px;
+    font-size: 32px;
     text-decoration: none;
     color: #000000;
 }

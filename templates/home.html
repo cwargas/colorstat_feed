@@ -16,14 +16,15 @@
         </a>
     </header>
 
-    <!-- MAIN HEADLINE -->
-<!--     <img src="/static/images/breaking.jpeg" class="img-fluid" height="200px">-->
-<!--    <h1 id="headline" class="display-5 fw-bold text-black"><a href="https://www.wsj.com/articles/google-strikes-deal-with-hospital-chain-to-develop-healthcare-algorithms-11622030401?mod=hp_lead_pos1">Google to develop healthcare algorithms with hospital</a></h1>-->
-<!--    <br><br>-->
+<!--     MAIN HEADLINE-->
+
+    <center><img src="/static/images/webb.png" class="img-fluid" width="500px"></center>
+    <center><h1 id="headline" class="display-5 fw-bold text-black"><a href="https://www.space.com/james-webb-space-telescope-christmas-launch-photos">JAMES WEBB LAUNCH PHOTOS</a></h1></center>
+    <br><br>
 
 
     {% for article in articles.items %}
-    <a><span class="article-content">{{article.title}}</span></a>
+        <span class="article-content">{{article.title}}</span>
         <a class="{{article.category}}" href="{{article.link}}">{{article.link|domain}}</a>
         <div class="article-pubdate">{{article.published|format_time}}</div>
 <!--        <br /> <br />-->
