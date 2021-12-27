@@ -131,7 +131,7 @@ def sitemap():
 import downloader
 import threading
 
-LOCAL = False
+LOCAL = True
 if LOCAL: # Use below if running on localhost
     if __name__ == '__main__':
         # start downloader in a separate thread

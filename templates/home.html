@@ -11,22 +11,37 @@
         <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
 
             <!-- LOGO-->
-                        <img src="/static/images/mf_logo_final.png" height="30px">
+            <img class="logo" src="/static/images/mf_logo_final.png" height="30px">
 
         </a>
     </header>
 
-<!--     MAIN HEADLINE-->
+<!--     MAIN HEADLINE ABOVE IMAGE-->
 
-    <center><img src="/static/images/webb.png" class="img-fluid" width="500px"></center>
-    <center><h1 id="headline" class="display-5 fw-bold text-black"><a href="https://www.space.com/james-webb-space-telescope-christmas-launch-photos">JAMES WEBB LAUNCH PHOTOS</a></h1></center>
-    <br><br>
+<!--    <h6>BREAKING...This is text above the main headline.<br>-->
+<!--        image for various news ideas that can be added<br>-->
+<!--        Multi-line text added</h6><br>-->
+
+
+    <!--     MAIN HEADLINE-->
+
+<!--    <center><img src="/static/images/webb.png" class="img-fluid" width="500px"></center>-->
+<!--    <center><h1 id="headline" class="display-5 fw-bold text-black"><a href="https://www.space.com/james-webb-space-telescope-christmas-launch-photos">JAMES WEBB LAUNCH PHOTOS</a></h1></center>-->
+<!--    <br><br>-->
 
 
     {% for article in articles.items %}
-        <span class="article-content">{{article.title}}</span>
-        <a class="{{article.category}}" href="{{article.link}}">{{article.link|domain}}</a>
+
+
+        <a class="main-feed" href="{{article.link}}">{{article.title}}</a>
         <div class="article-pubdate">{{article.published|format_time}}</div>
+
+<!--        OLD DESIGN WITH COLORS-->
+<!--        <span class="article-content">{{article.title}}</span>-->
+<!--        <a class="{{article.category}}" href="{{article.link}}">{{article.link|domain}}</a>-->
+<!--        <div class="article-pubdate">{{article.published|format_time}}</div>-->
+
+
 <!--        <br /> <br />-->
         {% endfor %}
     <br />
@@ -69,11 +84,11 @@
     </div>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2021 Megafeed</p>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Privacy</a></li>
-            <li class="list-inline-item"><a href="/about">About</a></li>
-        </ul>
+        <p class="mb-1">&copy; 2022 Megafeed</p>
+
+            <a class="footer" href="#">Privacy</a>
+            <a class="footer" href="/about">About</a>
+
     </footer>
 </div>
 {% if views %}
