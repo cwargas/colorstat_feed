@@ -21,7 +21,7 @@ def get_category(url):
         return 'politics'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url or 'space.com' in url or 'universetoday.com' in url:
         return 'space'
-    elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
+    elif 'newscientist.com' in url or 'livescience.com' in url:
         return 'science'
     # elif 'military.com' in url:
     #     return 'defense'
@@ -111,7 +111,6 @@ feed_urls = [
     # science
     'https://www.newscientist.com/subject/technology/feed/',
     'https://www.livescience.com/feeds/all',
-    'https://www.sciencemag.org/rss/news_current.xml',
 
     # defense
 
