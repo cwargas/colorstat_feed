@@ -23,8 +23,8 @@ def get_category(url):
         return 'space'
     elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
-    elif 'military.com' in url:
-        return 'defense'
+    # elif 'military.com' in url:
+    #     return 'defense'
     else:
         return '<unknown>'
 
