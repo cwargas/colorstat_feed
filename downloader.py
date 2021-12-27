@@ -17,14 +17,12 @@ def get_category(url):
     """
     if 'nypost.com' in url:
         return 'business'
-    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'powerlineblog.com' in url or 'theamericanconservative.com' in url:
+    elif 'nationalreview.com' in url or 'newsmax.com' in url or 'theamericanconservative.com' in url:
         return 'politics'
     elif 'phys.org' in url or 'nasa.gov' in url or 'spacenews.com' in url or 'space.com' in url or 'universetoday.com' in url:
         return 'space'
     elif 'newscientist.com' in url or 'livescience.com' in url or 'sciencemag.org' in url:
         return 'science'
-    elif 'reason.com' in url:
-        return 'general'
     elif 'politico.com' in url or 'defense.gov' in url or 'military.com' in url:
         return 'defense'
     else:
@@ -99,7 +97,6 @@ feed_urls = [
     # politics
     'https://www.nationalreview.com/feed/',
     'https://www.newsmax.com/rss/Politics/1/',
-    'https://www.powerlineblog.com/index.xml',
     'https://www.theamericanconservative.com/web-categories/politics/feed/',
     # world
   
@@ -115,8 +112,7 @@ feed_urls = [
     'https://www.newscientist.com/subject/technology/feed/',
     'https://www.livescience.com/feeds/all',
     'https://www.sciencemag.org/rss/news_current.xml',
-    # general
-    'https://reason.com/latest/feed/',
+
     # defense
     'https://rss.politico.com/defense.xml',
     'https://www.defense.gov/DesktopModules/ArticleCS/RSS.ashx?max=10&ContentType=1&Site=945',
