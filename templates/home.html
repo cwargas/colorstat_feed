@@ -23,7 +23,7 @@
 
 
     {% for article in articles.items %}
-        <span class="article-content">{{article.title}}</span>
+    <a><span class="article-content">{{article.title}}</span></a>
         <a class="{{article.category}}" href="{{article.link}}">{{article.link|domain}}</a>
         <div class="article-pubdate">{{article.published|format_time}}</div>
 <!--        <br /> <br />-->
