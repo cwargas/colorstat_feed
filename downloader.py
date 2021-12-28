@@ -54,10 +54,10 @@ def fetch_feeds(feed_urls):
         for entry in feed.entries:
             item = {
                 'title': entry.title,
-                'summary': entry.summary,
+                # 'summary': entry.summary,
                 'published': datetime.datetime.fromtimestamp(time.mktime(entry.published_parsed)),
                 'link': entry.link,
-                'category': get_category(feed_url),
+                # 'category': get_category(feed_url),
             }
             if item not in items:
                 items.append(item)
@@ -68,9 +68,8 @@ def fetch_feeds(feed_urls):
     for item in items:
         if item['link'] in links:
             continue
-        article = Article(title=item['title'], summary=item['summary'],
-                          published=item['published'], link=item['link'],
-                          category=item['category'])
+        article = Article(title=item['title'],
+                          published=item['published'], link=item['link'],)
         articles.append(article)
     print('Inserted', len(articles), 'articles')
 
