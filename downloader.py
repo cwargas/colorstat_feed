@@ -114,5 +114,5 @@ feed_urls = [
 
     # defense
     'https://www.militarytimes.com/arc/outboundfeeds/rss/category/news/?outputType=xml',
-    'https://www.dailymail.co.uk/articles.rss',
+    'https://www.dailymail.co.uk/ushome/index.rss',
 ]
